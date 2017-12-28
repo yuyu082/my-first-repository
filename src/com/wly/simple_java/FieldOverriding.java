@@ -1,19 +1,30 @@
 package com.wly.simple_java;
 
-public class FieldOverriding {
-	public static void main(String[] args) {
-		Super sp = new Super();
-		Sub sb = new Sub();
-		System.out.println(sp.s);
-		System.out.println(sb.s);
-	}
-}
-
 
 class Super{
 	String s = "super";
+//	public Super(){
+////		System.out.println("Super");
+//	}
+//	public Super(String s){
+////		System.out.println("Super---");
+//	}
 }
 
-class Sub extends Super{
+class Sub extends Super {
 	String s = "sub";
+//	public Sub(){
+////		super("");
+////		System.out.println("Sub");
+//	}
+}
+
+public class FieldOverriding {
+	public static void main(String[] args) {
+		Sub sb = new Sub();
+		System.out.println(sb.s);
+		
+		Super sp = new Sub();
+		System.out.println(sp.s);
+	}
 }
